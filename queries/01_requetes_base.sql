@@ -1,4 +1,5 @@
--- Requête 1 : Lister les contrats avec leur surface pour la commune de Caen
+-- Requête 1 : Lister les numéros de contrats avec leur surface
+-- pour la commune de Caen
 
 SELECT c.Contrat_ID, c.Surface
 FROM Contrat c
@@ -7,7 +8,8 @@ JOIN Region r
 WHERE r.com_nom_maj_court = 'CAEN';
 
 
--- Requête 2 : Lister les contrats et leur formule pour les maisons du département 71
+-- Requête 2 : Lister les numéros de contrats avec leur formule
+-- pour les maisons du département 71
 
 SELECT c.Contrat_ID, c.Formule
 FROM Contrat c
@@ -22,7 +24,7 @@ SELECT DISTINCT r.reg_nom
 FROM Region r;
 
 
--- Requête 4 : Lister les 5 contrats ayant les surfaces les plus élevées
+-- Requête 4 : Les 5 contrats ayant les surfaces les plus élevées
 
 SELECT c.Contrat_ID, c.Surface
 FROM Contrat c
