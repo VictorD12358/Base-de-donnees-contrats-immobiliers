@@ -4,17 +4,18 @@ SELECT AVG(c.Prix_cotisation_mensuel) AS moyenne_cotisation
 FROM Contrat c;
 
 
--- Requête 6 : Nombre de contrats par catégorie de valeur déclarée du bien
+-- Requête 6 : Nombre de contrats par catégorie
+-- de valeur déclarée des biens
 
 SELECT
     c.Valeur_declaree_bien,
     COUNT(c.Contrat_ID) AS total_contrats
 FROM Contrat c
-GROUP BY c.Valeur_declaree_bien
-ORDER BY total_contrats DESC;
+GROUP BY c.Valeur_declaree_bien;
 
 
--- Requête 7 : Nombre de contrats par formule en Pays de la Loire
+-- Requête 7 : Nombre de contrats par formule
+-- dans la région Pays de la Loire
 
 SELECT
     c.Formule,
@@ -46,7 +47,8 @@ JOIN Region r
 WHERE r.dep_nom = 'Paris';
 
 
--- Requête 10 : Top 10 des départements selon la cotisation mensuelle moyenne
+-- Requête 10 : Top 10 des départements
+-- selon la cotisation mensuelle moyenne
 
 SELECT
     r.cod_dep,
