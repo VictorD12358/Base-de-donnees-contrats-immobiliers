@@ -46,9 +46,6 @@ La base finale contient **30 335 contrats** et **38 919 communes**. Exemples d'a
 
 ## Réalisations
 
-![Schéma relationnel](images/schema_contrat_immo.jpeg)
-*Schéma relationnel*
-
 **Top 10 des départements avec la cotisation mensuelle moyenne la plus élevée (SQL)**
 
 ```sql
@@ -59,9 +56,6 @@ GROUP BY r.cod_dep
 ORDER BY moyenne_cotisation DESC
 LIMIT 10;
 ```
-
-![Résultat requête](images/resultat_requete.png)
-*Résultat de la requête*
 
 **Import des données avec Python (extrait)**
 
